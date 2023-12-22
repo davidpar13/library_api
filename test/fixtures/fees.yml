@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  paid: false
+  amount: 9.99
+  membership: one
+
+two:
+  paid: false
+  amount: 9.99
+  membership: two

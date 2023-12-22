@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  checked_out_on: 2023-12-21 11:18:05
+  returned_on: 2023-12-21 11:18:05
+  library: one
+  book: one
+  membership: one
+
+two:
+  checked_out_on: 2023-12-21 11:18:05
+  returned_on: 2023-12-21 11:18:05
+  library: two
+  book: two
+  membership: two
