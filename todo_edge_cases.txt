@@ -1,0 +1,11 @@
+Would Haves:
+- Move checked_out and returned_by from book to rental transaction. Added it to books because it made it easier to track books when doing the book search at the begging of working on this excercise.
+- I would check for n+1’s
+- Clean up strong params, routes, and controller actions
+- Revise adding indexes to db columns (although rails already added indexes to keys)
+- As to not depend on automation, we can calculate fees when a user signs in
+
+Edge Cases I thought of while developing the API:
+- What if a book is never returned or is destroyed. Account for this by maybe having an active flag with a description on the book.
+- What if an ISBM number changes. With my design, it would be more cumbersome to change.
+- What if a member wants to cancel their membership. Need a way to mark inactive and handle any outstanding fees and checked-out books

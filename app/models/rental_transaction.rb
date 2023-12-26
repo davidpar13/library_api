@@ -39,9 +39,9 @@ class RentalTransaction < ApplicationRecord
   def mark_book_availability
     find_book
     if checkout?
-      @book.update(checked_out: true, return_by: self.checked_out_on + 7.days)
+      @book.update(checked_out: true, return_by: self.checked_out_on + 7.days, availability: self.checked_out_on + 7.days)
     elsif return?
-      @book.update(library_id: self.library_id, checked_out: false, return_by: nil)
+      @book.update(library_id: self.library_id, checked_out: false, return_by: nil, availability: 'Available')
     end
   end
 

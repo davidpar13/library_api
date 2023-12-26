@@ -39,7 +39,8 @@ class BooksController < ApplicationController
   end
 
   def book_search
-    Book.book_search(params[:title], params[:library_id])
+    @book_search = Book.book_search(params[:title], params[:library_id])
+    render json: @book_search
   end
 
   private

@@ -1,24 +1,9 @@
 # README
+To run the application:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Once the repository is on you machine, in your terminal run ``$ bundle insall``
+Run ``$ rails db:migrate``
+Run ``$ rails db:seed``
+and spin up the server ``$ rails s``
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The repository also includes an erd for the application (/erd.pdf) as well as a text file with "would have's" and some edge cases I thought of (/todo_edge_cases.txt).

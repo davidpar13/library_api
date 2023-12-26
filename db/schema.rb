@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_26_184134) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_26_194323) do
   create_table "books", force: :cascade do |t|
     t.string "isbn"
     t.string "title"
@@ -20,6 +20,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_26_184134) do
     t.datetime "updated_at", null: false
     t.boolean "checked_out"
     t.date "return_by"
+    t.string "availability"
     t.index ["library_id"], name: "index_books_on_library_id"
   end
 

@@ -9,6 +9,12 @@ class Book < ApplicationRecord
   scope :title, ->(title) { where(title:  title).order(return_by: :asc) }
   scope :overdue, -> { where(checked_out: true).where('return_by <= ?', Time.now)}
 
+  after_initialize do
+    if self.new_record?
+      self.availability = "Available"
+    end
+  end
+
 
   def add_isbn
     #Lets see if we have the same book already and get the isbn
@@ -51,9 +57,11 @@ class Book < ApplicationRecord
 
   # abstracted out the iteration to search for books
   def self.book_iteration(books)
+    puts books.inspect
     books.each do |b|
       if !b.checked_out
         # return available book
+        puts b.inspect
         return b
       else
         # else return the book to be available the soonest since the scope is sorting by return_by asc
