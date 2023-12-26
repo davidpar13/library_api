@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_22_155435) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_26_184134) do
   create_table "books", force: :cascade do |t|
     t.string "isbn"
     t.string "title"
@@ -29,6 +29,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_22_155435) do
     t.integer "membership_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "book_id_id"
+    t.index ["book_id_id"], name: "index_fees_on_book_id_id"
     t.index ["membership_id"], name: "index_fees_on_membership_id"
   end
 

@@ -1,11 +1,13 @@
 class Book < ApplicationRecord
   belongs_to :library
   has_many :rental_transactions
+  has_many :fees
 
   before_create :add_isbn
 
   scope :title_and_library, ->(title, library_id) { where(title:  title, library_id: library_id).order(return_by: :asc) }
   scope :title, ->(title) { where(title:  title).order(return_by: :asc) }
+  scope :overdue, -> { where(checked_out: true).where('return_by <= ?', Time.now)}
 
 
   def add_isbn

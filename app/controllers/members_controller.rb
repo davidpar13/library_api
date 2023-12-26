@@ -13,6 +13,7 @@ class MembersController < ApplicationController
     render json: @member
   end
 
+
   # POST /members
   def create
     @member = Member.new(member_params)

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :members
 
   get 'book_search', to: 'books#book_search'
+  get 'update_fees', to: 'fees#update_fees'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

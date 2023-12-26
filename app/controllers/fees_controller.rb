@@ -33,6 +33,11 @@ class FeesController < ApplicationController
     end
   end
 
+  #automate on a daily schedule
+  def update_fees
+    Fee.calculate_fees
+  end
+
   # DELETE /fees/1
   def destroy
     @fee.destroy
